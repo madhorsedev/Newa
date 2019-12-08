@@ -81,6 +81,21 @@ html{
     border: 2px solid #FFF;
 }
 
+/* MAIN CONTENT */
+
+.main-content{
+    padding-top: 50px;
+}
+.index-row{
+    margin-bottom: 50px;
+}
+.index-img{
+    width: 100%;
+}
+.index-icon{
+    font-size: 4em;
+}
+
 /****** SESSION CONTROL ******/
 
 /* HEADER */
@@ -92,7 +107,7 @@ html{
 /* CONTENT */
 
 .session-control-bg{
-    height: 80vh;
+    min-height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,7 +118,7 @@ html{
     max-width: 500px;
 }
 .session-control-card{
-    margin: 0 auto;
+    margin: 35px auto;
     padding: 3em;
     width: 60%;
     background-color: rgba(255,255,255,0.95) !important;
@@ -120,4 +135,84 @@ html{
     margin-bottom: 10px;
     width: 100%;
     border-color: #3d6087 !important;
+}
+.session-control-err{
+    margin: 20px auto 0 auto;
+    padding: 3em;
+    width: 60%;
+}
+
+/****** DESKTOP ******/
+
+/* CONTENT */
+
+.desktop-row{
+    margin-top: 50px;
+}
+.desktop-title{
+    color: #FFF;
+}
+.desktop-btn{
+    float: right;
+    padding: .375rem 2rem !important;
+    background-color: #FFF !important;
+}
+.desktop-add{
+    float: right;
+    padding: .375rem 2rem !important;
+    background-color: #c0843d !important;
+    border: 0 !important;
+}
+.desktop-delete{
+    float: right;
+    margin: 0 15px;
+    padding: .375rem 2rem !important;
+    background-color: #ff4d4d !important;
+    border: 0 !important;
+}
+.desktop-update{
+    float: right;
+    margin: 0 15px;
+    padding: .375rem 2rem !important;
+    background-color: #36b336 !important;
+    border: 0 !important;
+}
+.desktop-profile-col{
+    display: flex;
+    justify-content: center;
+}
+.desktop-profile-delete{
+    width: 60%;
+    margin: 0 auto 15px auto;
+    background-color: #ff4d4d !important;
+    border: 0 !important;
+}
+.desktop-profile-close{
+    width: 60%;
+    margin: 0 auto 50px auto;
+    background-color: #c0843d !important;
+    border: 0 !important;
+}
+.desktop-add-title{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.desktop-add-row{
+    margin-bottom: 50px;
+}
+.rss-row{
+    margin-top: 50px;
+}
+.rss-card{
+    margin-bottom: 50px;
+}
+.rss-title{
+    color: #FFF;
+}
+
+/****** FOOTER ******/
+
+.footer-bg{
+    background-color: #222;
+    height: 15vh;
 }
