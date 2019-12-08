@@ -1,3 +1,4 @@
-    <p>And a better footer!</p>
+    <div class="container-fluid footer-bg">
+    </div>
 </body>
 </html>

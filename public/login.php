@@ -35,22 +35,21 @@
 
         if(!isset($var) || empty($var)){
             $err = TRUE;
-            $varErr = "Campo obligatorio.";
+            $varErr = "Introduzca un nombre de usuario o correo electrónico.";
         }
 
         if(isset($pass) && !empty($pass)){
             if(strlen($pass) < 8){
                 $err = TRUE;
-                $passErr = "Introduzca una contraseña de al menos 8 caracteres";
+                $passErr = "Introduzca una contraseña de al menos 8 caracteres.";
             }
         }else{
             $err = TRUE;
-            $passErr = "Campo obligatorio.";
+            $passErr = "Introduzca una contraseña.";
         }
 
         if(!$err){
-            $res = $db->logInUser($var, $pass);
-            print_r($res);
+            @$res = $db->logInUser($var, $pass);
         }
 
     }
@@ -79,6 +78,26 @@
                     </div>
                 </div>
             </div>
+            <?php
+
+                if($err){
+                    echo '<div class="alert alert-danger session-control-err" role="alert">';
+
+                    if($varErr) echo "<p>".$varErr."</p>";
+                    if($passErr) echo "<p>".$passErr."</p>";
+                            
+                    echo '</div>';
+                }
+
+                if(@$res){
+                    echo '<div class="alert alert-danger session-control-err" role="alert">';
+
+                    echo "<p>".$res."</p>";
+                            
+                    echo '</div>';
+                }
+
+            ?>
         </div>
     </div>
 

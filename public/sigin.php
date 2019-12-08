@@ -63,9 +63,6 @@
 
         if(!$err){
             $res = $db->createUser($user, $email, $pass);
-            print_r($res);
-        }else{
-            echo "NOT NICE";
         }
 
     }
@@ -100,6 +97,34 @@
                     </div>
                 </div>
             </div>
+            <?php
+
+                if($err){
+                    echo '<div class="alert alert-danger session-control-err" role="alert">';
+
+                    if($varErr) echo "<p>".$userErr."</p>";
+                    if($varErr) echo "<p>".$emailErr."</p>";
+                    if($passErr) echo "<p>".$passErr."</p>";
+                            
+                    echo '</div>';
+                }
+
+                if(@$res){
+
+                    if($res["user"]){
+                        echo '<div class="alert alert-danger session-control-err" role="alert">
+                                <p>'.$res["user"].'</p>
+                            </div>';
+                    }
+                    if($res["email"]){
+                        echo '<div class="alert alert-danger session-control-err" role="alert">
+                                <p>'.$res["email"].'</p>
+                            </div>';
+                    }
+                            
+                }
+
+            ?>
         </div>
     </div>
 
